@@ -22,5 +22,6 @@ function dotsMatrix(h = 7, w = 5) {
    [1, ``, ``, ``, 1],
 ];
 
-console.log(A);
+console.log(A);̥
 // dotsMatrix()
+mon
