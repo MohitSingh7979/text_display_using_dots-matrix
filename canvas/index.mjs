@@ -1,3 +1,5 @@
+import strides from "./data.mjs";
+
 /*
 0 0 0 0 0
 0 0 0 0 0
@@ -51,50 +53,10 @@ function charGrid(stridesArray) {
   }
 }
 
-/* A
-00100
-01010
-10001
-11111
-10001
-10001
-10001
- */
-const aStrides /* width of bitmap */ = [
-  0b00100, 0b01010, 0b10001, 0b11111, 0b10001, 0b10001, 0b10001,
-];
-// charGrid(aStrides);
+function displayName(name) {
+  let chars = name.split("");
+  let charStrides = chars.map((char) => strides[char]);
+  charGrid(charStrides);
+}
 
-/* B
-11110
-10001
-11110
-10001
-10001
-10001
-11110
- */
-const bStride = [0b11110, 0b10001, 0b11110, 0b10001, 0b10001, 0b10001, 0b11110];
-// console.log("");
-// charGrid(bStride);
-
-/* C
-01110
-10001
-10000
-10000
-10000
-10001
-01110
-*/
-
-charGrid([aStrides, bStride, aStrides, bStride, aStrides, bStride]);
-/* D
-1 1 1 0 0
-1 0 0 1 0
-1 0 0 0 1
-1 0 0 0 1
-1 0 0 0 1
-1 0 0 1 0
-1 1 1 0 0
-*/
+displayName("ABAB");
